@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>guess_the_number &#8212; CMIT-135-40D-WEEK4 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">CMIT-135-40D-WEEK4 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for guess_the_number</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">:Student: Craig Smith</span>
+<span class="sd">:Week-4: Loops</span>
+<span class="sd">:Module: guess_the_number</span>
+<span class="sd">:Course: CMIT-135-40D (Champlain College)</span>
+<span class="sd">:Professor: Steve Giles</span>
+<span class="sd">:Author: Craig Smith</span>
+
+<span class="sd">Purpose</span>
+<span class="sd">-------</span>
+<span class="sd">The computer chooses a random number between 0 and 100 and the user has to guess</span>
+<span class="sd">the randomly generated number.</span>
+
+<span class="sd">Constraints</span>
+<span class="sd">-----------</span>
+<span class="sd">1. Random number between 0 and 9, inclusive</span>
+<span class="sd">2. Import and use the randint method from the random module</span>
+
+<span class="sd">Parameters</span>
+<span class="sd">----------</span>
+<span class="sd">:param guessed_input: Number input by user at the terminal</span>
+<span class="sd">:output responses: &#39;Guess Higher&#39;, &#39;Guess Lower&#39;, &#39;Great job! You guessed the correct number: &#39;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Imports</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+
+<span class="c1"># Helper Functions</span>
+
+
+<div class="viewcode-block" id="convert_str_to_num"><a class="viewcode-back" href="../guess_the_number.html#guess_the_number.convert_str_to_num">[docs]</a><span class="k">def</span> <span class="nf">convert_str_to_num</span><span class="p">(</span><span class="n">str_number</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function takes a string, validates it can be converted to a number</span>
+<span class="sd">    and returns either a string or float representation of the string.</span>
+
+<span class="sd">    :param str_number: a string representation of a number</span>
+<span class="sd">                       ex: &quot;123&quot;, &quot;123.3&quot;, &quot;-123&quot;, &quot;-123.3&quot;</span>
+
+<span class="sd">    :return: an int or float representing the number in the string</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">str_number</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">str_number</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">str_number</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">str_number</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">str_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Please enter a valid number: &#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="lower_higher"><a class="viewcode-back" href="../guess_the_number.html#guess_the_number.lower_higher">[docs]</a><span class="k">def</span> <span class="nf">lower_higher</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="n">guess</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function takes a known number and an unknown number and compares the</span>
+<span class="sd">    difference. The function will return a message indicating to the calling</span>
+<span class="sd">    function whether or not the user needs to guess higher or lower than the</span>
+<span class="sd">    number just guessed.</span>
+
+<span class="sd">    :param answer: known integer value determined by the calling function</span>
+<span class="sd">    :param guess: number passed in by the end user</span>
+<span class="sd">    :return: &#39;Guess Higher&#39;, &#39;Guess Lower&#39;, True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">answer</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Guess Higher&#39;</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Guess Lower&#39;</span></div>
+
+
+<span class="c1"># Main</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">random_number</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">matching_value</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">guessed_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;The computer has chosen a number at random between 0 and 100.</span><span class="se">\n</span><span class="s1"> &#39;</span>
+                          <span class="s1">&#39;Please try and guess the chosen number: &#39;</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">matching_value</span><span class="p">:</span>
+        <span class="n">guessed_number</span> <span class="o">=</span> <span class="n">convert_str_to_num</span><span class="p">(</span><span class="n">guessed_input</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">lower_higher</span><span class="p">(</span><span class="n">random_number</span><span class="p">,</span> <span class="n">guessed_number</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;Guess Higher&#39;</span><span class="p">:</span>
+            <span class="n">guessed_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a Higher Number: &#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">result</span> <span class="o">==</span> <span class="s1">&#39;Guess Lower&#39;</span><span class="p">:</span>
+            <span class="n">guessed_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Guess a Lower Number: &#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">matching_value</span> <span class="o">=</span> <span class="n">result</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Great job! You guessed the correct number: &#39;</span><span class="p">,</span> <span class="n">random_number</span><span class="p">)</span>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">CMIT-135-40D-WEEK4 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Craig Smith.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

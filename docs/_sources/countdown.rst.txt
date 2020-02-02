@@ -1,0 +1,7 @@
+countdown module
+================
+
+.. automodule:: countdown
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>countdown module &#8212; CMIT-135-40D-WEEK4 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="guess_the_number module" href="guess_the_number.html" />
+    <link rel="prev" title="cipher module" href="cipher.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="guess_the_number.html" title="guess_the_number module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cipher.html" title="cipher module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CMIT-135-40D-WEEK4 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">CMIT-135-40D-WEEK4</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-countdown">
+<span id="countdown-module"></span><h1>countdown module<a class="headerlink" href="#module-countdown" title="Permalink to this headline">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Student</dt>
+<dd class="field-odd"><p>Craig Smith</p>
+</dd>
+<dt class="field-even">Week-4</dt>
+<dd class="field-even"><p>Loops</p>
+</dd>
+<dt class="field-odd">Module</dt>
+<dd class="field-odd"><p>countdown</p>
+</dd>
+<dt class="field-even">Course</dt>
+<dd class="field-even"><p>CMIT-135-40D (Champlain College)</p>
+</dd>
+<dt class="field-odd">Professor</dt>
+<dd class="field-odd"><p>Steve Giles</p>
+</dd>
+<dt class="field-even">Author</dt>
+<dd class="field-even"><p>Craig Smith</p>
+</dd>
+</dl>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>This program counts down from 10 utilizing the “while” loop method and the
+“for” loop method.</p>
+</div>
+<div class="section" id="constraints">
+<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Upper starting limit integer 10</p></li>
+<li><p>Include a “while” loop version</p></li>
+<li><p>Include a “for” loop version</p></li>
+</ol>
+<dl class="function">
+<dt id="countdown.for_countdown">
+<code class="sig-prename descclassname">countdown.</code><code class="sig-name descname">for_countdown</code><span class="sig-paren">(</span><em class="sig-param">starting_number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/countdown.html#for_countdown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#countdown.for_countdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a number, validates its a positive integer, and prints
+the countdown to 0 to the terminal using a “for” loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>starting_number</strong> – Integer &gt; 0</p>
+</dd>
+<dt class="field-even">Terminal output</dt>
+<dd class="field-even"><p>Label indicating countdown method used and a printout of the countdown</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="countdown.while_countdown">
+<code class="sig-prename descclassname">countdown.</code><code class="sig-name descname">while_countdown</code><span class="sig-paren">(</span><em class="sig-param">starting_number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/countdown.html#while_countdown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#countdown.while_countdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a number, validates its a positive integer, and prints
+the countdown to 0 to the terminal using a “while” loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>starting_number</strong> – Integer &gt; 0</p>
+</dd>
+<dt class="field-even">Terminal output</dt>
+<dd class="field-even"><p>Label indicating countdown method used and a printout of the countdown</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div id="source_code">
+    <table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+countdown.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">&quot;&quot;&quot;
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a>:Student: Craig Smith
+<a name="l4"><span class="ln">4    </span></a>:Week-4: Loops
+<a name="l5"><span class="ln">5    </span></a>:Module: countdown
+<a name="l6"><span class="ln">6    </span></a>:Course: CMIT-135-40D (Champlain College)
+<a name="l7"><span class="ln">7    </span></a>:Professor: Steve Giles
+<a name="l8"><span class="ln">8    </span></a>:Author: Craig Smith
+<a name="l9"><span class="ln">9    </span></a>
+<a name="l10"><span class="ln">10   </span></a>Purpose
+<a name="l11"><span class="ln">11   </span></a>-------
+<a name="l12"><span class="ln">12   </span></a>This program counts down from 10 utilizing the &quot;while&quot; loop method and the
+<a name="l13"><span class="ln">13   </span></a>&quot;for&quot; loop method.
+<a name="l14"><span class="ln">14   </span></a>
+<a name="l15"><span class="ln">15   </span></a>Constraints
+<a name="l16"><span class="ln">16   </span></a>-----------
+<a name="l17"><span class="ln">17   </span></a>1. Upper starting limit integer 10
+<a name="l18"><span class="ln">18   </span></a>2. Include a &quot;while&quot; loop version
+<a name="l19"><span class="ln">19   </span></a>3. Include a &quot;for&quot; loop version
+<a name="l20"><span class="ln">20   </span></a>
+<a name="l21"><span class="ln">21   </span></a>&quot;&quot;&quot;</span>
+<a name="l22"><span class="ln">22   </span></a>
+<a name="l23"><span class="ln">23   </span></a><span class="s2"># Helper functions</span>
+<a name="l24"><span class="ln">24   </span></a>
+<a name="l25"><span class="ln">25   </span></a>
+<a name="l26"><span class="ln">26   </span></a><span class="s3">def </span><span class="s1">while_countdown</span><span class="s4">(</span><span class="s1">starting_number</span><span class="s4">)</span><span class="s5">:</span>
+<a name="l27"><span class="ln">27   </span></a>    <span class="s0">&quot;&quot;&quot;
+<a name="l28"><span class="ln">28   </span></a>    This function takes a number, validates its a positive integer, and prints
+<a name="l29"><span class="ln">29   </span></a>    the countdown to 0 to the terminal using a &quot;while&quot; loop.
+<a name="l30"><span class="ln">30   </span></a>
+<a name="l31"><span class="ln">31   </span></a>    :param starting_number: Integer &gt; 0
+<a name="l32"><span class="ln">32   </span></a>    :terminal output: Label indicating countdown method used and a printout of the countdown
+<a name="l33"><span class="ln">33   </span></a>    &quot;&quot;&quot;</span>
+<a name="l34"><span class="ln">34   </span></a>    <span class="s1">print</span><span class="s4">(</span><span class="s6">f&quot;Counting down from </span><span class="s7">{</span><span class="s1">starting_number</span><span class="s7">} </span><span class="s6">to 0 using a 'while loop'&quot;</span><span class="s4">)</span>
+<a name="l35"><span class="ln">35   </span></a>    <span class="s3">while </span><span class="s1">starting_number </span><span class="s5">&gt;= </span><span class="s7">0</span><span class="s5">:</span>
+<a name="l36"><span class="ln">36   </span></a>        <span class="s1">print</span><span class="s4">(</span><span class="s1">starting_number</span><span class="s4">)</span>
+<a name="l37"><span class="ln">37   </span></a>        <span class="s1">starting_number </span><span class="s5">-= </span><span class="s7">1</span>
+<a name="l38"><span class="ln">38   </span></a>
+<a name="l39"><span class="ln">39   </span></a>
+<a name="l40"><span class="ln">40   </span></a><span class="s3">def </span><span class="s1">for_countdown</span><span class="s4">(</span><span class="s1">starting_number</span><span class="s4">)</span><span class="s5">:</span>
+<a name="l41"><span class="ln">41   </span></a>    <span class="s0">&quot;&quot;&quot;
+<a name="l42"><span class="ln">42   </span></a>    This function takes a number, validates its a positive integer, and prints
+<a name="l43"><span class="ln">43   </span></a>    the countdown to 0 to the terminal using a &quot;for&quot; loop.
+<a name="l44"><span class="ln">44   </span></a>
+<a name="l45"><span class="ln">45   </span></a>    :param starting_number: Integer &gt; 0
+<a name="l46"><span class="ln">46   </span></a>    :terminal output: Label indicating countdown method used and a printout of the countdown
+<a name="l47"><span class="ln">47   </span></a>    &quot;&quot;&quot;</span>
+<a name="l48"><span class="ln">48   </span></a>    <span class="s1">print</span><span class="s4">(</span><span class="s6">f&quot;Counting down from </span><span class="s7">{</span><span class="s1">starting_number</span><span class="s7">} </span><span class="s6">to 0 using a 'for loop'&quot;</span><span class="s4">)</span>
+<a name="l49"><span class="ln">49   </span></a>    <span class="s3">for </span><span class="s1">number </span><span class="s3">in </span><span class="s1">range</span><span class="s4">(</span><span class="s1">starting_number</span><span class="s5">, -</span><span class="s7">1</span><span class="s5">, -</span><span class="s7">1</span><span class="s4">)</span><span class="s5">:</span>
+<a name="l50"><span class="ln">50   </span></a>        <span class="s1">print</span><span class="s4">(</span><span class="s1">number</span><span class="s4">)</span>
+<a name="l51"><span class="ln">51   </span></a>
+<a name="l52"><span class="ln">52   </span></a><span class="s2"># Main</span>
+<a name="l53"><span class="ln">53   </span></a>
+<a name="l54"><span class="ln">54   </span></a>
+<a name="l55"><span class="ln">55   </span></a><span class="s3">if </span><span class="s1">__name__ </span><span class="s5">== </span><span class="s6">'__main__'</span><span class="s5">:</span>
+<a name="l56"><span class="ln">56   </span></a>    <span class="s1">while_countdown</span><span class="s4">(</span><span class="s7">10</span><span class="s4">)</span>
+<a name="l57"><span class="ln">57   </span></a>    <span class="s1">for_countdown</span><span class="s4">(</span><span class="s7">10</span><span class="s4">)</span>
+<a name="l58"><span class="ln">58   </span></a></pre>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">countdown module</a><ul>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#constraints">Constraints</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cipher.html"
+                        title="previous chapter">cipher module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="guess_the_number.html"
+                        title="next chapter">guess_the_number module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/countdown.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="guess_the_number.html" title="guess_the_number module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cipher.html" title="cipher module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CMIT-135-40D-WEEK4 1.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >CMIT-135-40D-WEEK4</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Craig Smith.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>

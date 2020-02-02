@@ -1,0 +1,7 @@
+cipher module
+=============
+
+.. automodule:: cipher
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,7 @@
+multiplication\_table module
+============================
+
+.. automodule:: multiplication_table
+    :members:
+    :undoc-members:
+    :show-inheritance:

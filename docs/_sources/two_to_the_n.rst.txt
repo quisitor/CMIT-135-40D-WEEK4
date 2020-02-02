@@ -1,0 +1,7 @@
+two\_to\_the\_n module
+======================
+
+.. automodule:: two_to_the_n
+    :members:
+    :undoc-members:
+    :show-inheritance:

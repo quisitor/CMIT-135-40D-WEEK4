@@ -1,0 +1,11 @@
+CMIT-135-40D-WEEK4
+==================
+
+.. toctree::
+   :maxdepth: 4
+
+   cipher
+   countdown
+   guess_the_number
+   multiplication_table
+   two_to_the_n
